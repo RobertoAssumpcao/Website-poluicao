@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <title>APS WEB - Entre ou cadastre-se</title>
+    <script language="JavaScript">
+        function entrar()
+        {
+          var batsu = document.createElement("submit");  
+          batsu.setAttribute('type', 'button');  
+          batsu.setAttribute('valeu', 'AGAIN');  
+          batsu.setAttribute('onClick', 'history.go(0)');  
+          document.body.appendChild(batsu);
+        }
+        function esqueci()
+        {
+          alert("Entre em cotanto com o suporte ");
+        }
+    </script>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="conteiner">
+      <form action="principal.html" method="GET" accept-charset="utf-8" class="form-login border-3  border border-dark">
+        <div class="text-center">
+            <h1 class="display-4"> <img src="favicon-96x96.png" class="img-fluid" alt="Minha Figura">       APSWEB</h1>
+        </div>
+        <div class="form-group">
+          <label for="inputlogin">Login</label>
+          <input type="text" class="form-control"  id="inputlogin" placeholder="Digite seu login" required autofocus required pattern="\w{8,30}">
+        </div>
+        <div class="form-group">
+          <label for="inputpassword">Senha</label>
+          <input type="password" class="form-control"  id="inputpassword" placeholder="Digite sua senha" required required pattern="[a-z]{8}\d{2}">
+        </div>
+        <div>
+          <a  href="#" onclick="esqueci()">Esqueci a senha</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" onclick="entrar()">Entrar</button>
+        <a class="btn btn-success btn-block" href="#" role="button" data-toggle="modal" data-target="#myModal">Criar conta</a>
+        </div>
+    </form>
+    <form action="cadastro.html" method="GET" accept-charset="utf-8" class="form-login">
+        <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h4 class="modal-title">APSWEB</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <label for="inputlogin">Login</label>
+                    <input type="text" class="form-control"  id="inputlogin" placeholder="Digite seu login" required autofocus required pattern="\w{8,30}">
+                    <p>O login deve ter 8 caracteres alfanuméricos</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputemail">E-mail</label>
+                    <input type="email" class="form-control"  id="inputemail" placeholder="Digite seu email" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputpassword">Senha</label>
+                    <input type="password" class="form-control"  id="inputpassword" placeholder="Digite sua senha" required required pattern="[a-z]{8}\d{2}">
+                    <p>O login deve ter 8 letras minúsculos e 2 numeros</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="inputnome">Nome</label>
+                    <input type="text" class="form-control"  id="inputnome" placeholder="Digite seu nome" required required pattern="\w{8,30}">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary" data-dismiss="modal">Fechar</button>
+                  <button type="submit" class="btn btn-success">Inscrever-se</button>
+                </div>
+              </div>           
+            </div>
+    </form>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
